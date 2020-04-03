@@ -11,9 +11,9 @@
 .navbar__mainLogo {
   background-repeat: no-repeat;
   background-image: url("/images/logo.png");
-  background-color: #fff;
+  /* background-color: #fff; */
   width: 300px;
-  height: 100px;
+  /* height: 100px; */
 }
 .navbar-nav > li {
   margin-left: 20px;
