@@ -21,9 +21,10 @@ Route::get('users/edit', 'UsersController@edit');
 
 Route::get('/users/{user_id}', 'UsersController@show');
 
+Route::post('users/update', 'UsersController@update');
+
 Route::get('posts/new', 'PostsController@new')->name('new');
 
 Route::post('/posts', 'PostsController@store');
 
-Route::post('users/update', 'UsersController@update');
-
+Route::get('postsdelete/{post_id}', 'PostsController@destroy');
