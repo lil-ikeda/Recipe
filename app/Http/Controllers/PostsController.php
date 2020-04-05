@@ -43,6 +43,7 @@ class PostsController extends Controller
         // Postモデル作成
         $post = new Post;
         $post->caption = $request->caption;
+        $post->name = $request->name;
         $post->user_id = Auth::user()->id;
 
         $post->save();

@@ -131,7 +131,7 @@ footer {
   margin-right: 10px;
 }
 .card-wrap {
-  margin: 40px 0px;
+  margin: 20px 0px;
 }
 .no-text-decoration:hover {
   text-decoration: none;
@@ -156,6 +156,11 @@ footer {
   height: 36px;
   width: 36px;
   background-size: 40px !important;
+}
+.post-name {
+  margin-top: 20px;
+  font-size: 28px;
+  font-weight: bold;
 }
 .post-time {
   margin: 0;

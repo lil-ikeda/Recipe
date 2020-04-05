@@ -4,8 +4,8 @@
 
 @section('content')
 
-<h2>{{ $post->name }}</h2>
 <div class="col-md-8 col-md-2 mx-auto">
+  <div class="post-name">{{ $post->name }}</div>
   <div class="card-wrap">
     <div class="card">
     <img src="/storage/post_images/{{ $post->id }}.jpg" class="card-img-top" />
