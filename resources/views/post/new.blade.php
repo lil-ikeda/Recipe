@@ -16,13 +16,13 @@
           {{csrf_field()}} 
             
           <div class="col pl-0">
-            <input class="form-control border-0" placeholder="料理名" type="text" name="name" value="{{ old('list_name') }}"/>
+            <input class="form-control border" placeholder="料理名" type="text" name="name" value="{{ old('list_name') }}"/>
           </div>
           <div class="mb-3">
             <input type="file" name="photo" accept="image/jpeg,image/gif,image/png" />
           </div>
             <div class="col pl-0">
-              <input class="form-control border-0" placeholder="キャプションを書く" type="text" name="caption" value="{{ old('list_name') }}"/>
+              <input class="form-control border" placeholder="キャプションを書く" type="text" name="caption" value="{{ old('list_name') }}"/>
             </div>
             <input type="submit" name="commit" value="投稿する" class="btn btn-primary" data-disable-with="投稿する" />
           </form>

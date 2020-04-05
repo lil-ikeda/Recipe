@@ -10,15 +10,15 @@
     <div class="card-wrap">
       <div class="card">
         <div class="card-header align-items-center d-flex">
-          <a class="no-text-decoration" href="/users/{{ $post->user->id }}">
+          <!-- <a class="no-text-decoration" href="/users/{{ $post->user->id }}">
             @if ($post->user->profile_photo)
                 <img class="post-profile-icon round-img" src="{{ asset('storage/user_images/' . $post->user->profile_photo) }}"/>
             @else
                 <img class="post-profile-icon round-img" src="{{ asset('/images/blank_profile.png') }}"/>
             @endif
-          </a>
-          <a class="black-color no-text-decoration" title="{{ $post->user->name }}" href="/users/{{ $post->user->id }}">
-            <strong>{{ $post->user->name }}</strong>
+          </a> -->
+          <a class="black-color no-text-decoration" title="{{ $post->user->name }}" href="/posts/{{ $post->id }}">
+            <strong>{{ $post->name }}</strong>
           </a>
           @if ($post->user->id == Auth::user()->id)
           	<a class="ml-auto mx-0 my-auto" rel="nofollow" href="/postsdelete/{{ $post->id }}">
