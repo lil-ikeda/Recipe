@@ -23,7 +23,7 @@ class LikesController extends Controller
         $like->user_id = Auth::user()->id;
         $like->save();
         
-        return redirect('/');
+        return redirect('/posts/'.$request->post_id);
     }
     
     public function destroy(Request $request)

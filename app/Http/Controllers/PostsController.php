@@ -53,6 +53,13 @@ class PostsController extends Controller
         return redirect('/');
     }
 
+    public function show($post_id)
+    {
+        $post = Post::where('id', $post_id)
+            ->firstOrFail();
+        return view('post/show', ['post' => $post]);
+    }
+
     public function destroy($post_id)
     {
         $post = Post::find($post_id);

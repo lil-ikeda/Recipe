@@ -11,21 +11,28 @@
         投稿画面
       </div>
       <div class="card-body">
+        
         <form class="upload-images p-0 border-0" id="new_post" enctype="multipart/form-data" action="{{ url('posts')}}" accept-charset="UTF-8" method="POST">
-        {{csrf_field()}} 
-          <div class="form-group row mt-2">
-            <div class="col-auto pr-0">
-              <img class="post-profile-icon round-img" src="{{ asset('storage/user_images/' . Auth::user()->id . '.jpg') }}"/>
-            </div>
-            <div class="col pl-0">
-              <input class="form-control border-0" placeholder="キャプションを書く" type="text" name="caption" value="{{ old('list_name') }}"/>
-            </div>
+          {{csrf_field()}} 
+            
+          <div class="col pl-0">
+            <input class="form-control border-0" placeholder="料理名" type="text" name="name" value="{{ old('list_name') }}"/>
           </div>
           <div class="mb-3">
             <input type="file" name="photo" accept="image/jpeg,image/gif,image/png" />
           </div>
-          <input type="submit" name="commit" value="投稿する" class="btn btn-primary" data-disable-with="投稿する" />
-        </form>      
+            <div class="col pl-0">
+              <input class="form-control border-0" placeholder="キャプションを書く" type="text" name="caption" value="{{ old('list_name') }}"/>
+            </div>
+            <input type="submit" name="commit" value="投稿する" class="btn btn-primary" data-disable-with="投稿する" />
+          </form>
+
+          <!-- <form action="{{ url('material')}}">
+            <input class="form-control border-0" placeholder="材料" type="text" name="material" value="{{ old('list_name') }}"/>
+            <input class="form-control border-0" placeholder="分量" type="text" name="amount" value="{{ old('list_name') }}"/>
+            <input type="submit" name="commit" value="投稿する" class="btn btn-primary" data-disable-with="投稿する" />
+          </form> -->
+                
       </div>
     </div>
   </div>

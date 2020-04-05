@@ -11,6 +11,7 @@
 |
 */
 Route::get('/', 'PostsController@index');
+
 Auth::routes();
 
 // Route::get('/home', 'HomeController@index')->name('home');
@@ -21,9 +22,14 @@ Route::get('users/edit', 'UsersController@edit');
 
 Route::get('/users/{user_id}', 'UsersController@show');
 
+
+Route::get('/posts/new', 'PostsController@new')->name('new');
+
+Route::get('/posts/{post_id}', 'PostsController@show');
+
+
 Route::post('users/update', 'UsersController@update');
 
-Route::get('posts/new', 'PostsController@new')->name('new');
 
 Route::post('/posts', 'PostsController@store');
 

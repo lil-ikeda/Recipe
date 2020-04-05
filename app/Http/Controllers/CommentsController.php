@@ -23,13 +23,16 @@ class CommentsController extends Controller
         $comment->user_id = Auth::user()->id;
         $comment->save();
 
-        return redirect('/');
+        return redirect('/posts/'.$request->post_id);
     }
 
     public function destroy(Request $request)
     {
         $comment = Comment::find($request->comment_id);
+        $comment->post_id = $request->post_id;
         $comment->delete();
+        
+        // return redirect('/posts/'.$request->post_id);
         return redirect('/');
     }
 }

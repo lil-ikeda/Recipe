@@ -4,13 +4,14 @@
   height: 77px;
 }
 .navbar__brand {
+  margin-top: 25px;
   height: 65px;
   width: 210px;
   background-size: 220px;
 }
 .navbar__mainLogo {
   background-repeat: no-repeat;
-  background-image: url("/images/logo.png");
+  background-image: url("/images/Recipe_logo.png");
 }
 .navbar-nav > li {
   margin-left: 20px;
