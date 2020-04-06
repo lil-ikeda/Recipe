@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
+  
   Public function user()
   {
     return $this->belongsTo('App\User');
@@ -24,7 +25,7 @@ class Post extends Model
       return $this->hasMany('App\Comment');
   }
 
-  public function material()
+  public function materials()
   {
     return $this->hasMany('App\Material');
   }

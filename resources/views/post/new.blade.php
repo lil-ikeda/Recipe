@@ -22,7 +22,8 @@
             <input type="file" name="photo" accept="image/jpeg,image/gif,image/png" />
           </div>
             <div class="col pl-0">
-              <input class="form-control border" placeholder="キャプションを書く" type="text" name="caption" value="{{ old('list_name') }}"/>
+              <!-- <input class="form-control border" placeholder="レシピを書く" type="text" name="caption" value="{{ old('list_name') }}"/> -->
+              <textarea name="caption" class="form-control border" cols="30" rows="10" placeholder="レシピをここに書く"></textarea>
             </div>
             <input type="submit" name="commit" value="投稿する" class="btn btn-primary" data-disable-with="投稿する" />
           </form>

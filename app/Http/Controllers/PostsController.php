@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Material;
 use App\Post;
 use Auth;
 use Validator;
@@ -10,6 +11,7 @@ use Illuminate\Http\Request;
 
 class PostsController extends Controller
 {
+
     public function __construct()
     {
         $this->middleware('auth');
@@ -58,6 +60,10 @@ class PostsController extends Controller
     {
         $post = Post::where('id', $post_id)
             ->firstOrFail();
+        // \Log::info($post);
+        // $materials = Material::where('post_id', $post->id)
+        //     ->firstOrFail();
+        // \Log::info($post);
         return view('post/show', ['post' => $post]);
     }
 
