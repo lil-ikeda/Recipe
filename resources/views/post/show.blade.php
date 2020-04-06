@@ -3,6 +3,7 @@
 @include('footer')
 
 @section('content')
+
 <div class="col-md-8 col-md-2 mx-auto">
     <div class="card-wrap">
       <div class="card">
@@ -16,8 +17,31 @@
             @include('post.material_list')
           </div>
 
-          
-          <p class="middle-title">作り方</p>
+          <div class="modal js_modal">
+  <div class="modal__bg js_modal_close">
+    <div class="modal__content">
+      <h1>3種類の声かけで音声ガイドの操作ができます。</h1>
+      <br>
+      <p>「次」：ひとつ後の工程に　　　　　　　　</p>
+      <br>
+      <p>「もう１回」：今の工程のガイドをもう一度</p>
+      <br>
+      <p>「戻る」：ひとつ前の工程に　　　　　　　</p>
+      <br>
+      <p class="guide_start">音声ガイドをスタートしますか？</p>
+      <div class="yesno_split">
+        <div class="js_modal_close btn">やめる</div>
+        <div class="js_modal_close" id="btn">スタートする</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+          <div class="howto_split">
+            <p class="middle-title-howto">作り方</p>
+            <button class="js_modal_open">音声ガイドをスタートする</button>
+          </div>
           <span>{!! nl2br(e($post->caption)) !!}</span>
         </div>
         <div class="card-body">
