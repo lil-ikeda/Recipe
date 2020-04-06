@@ -24,12 +24,11 @@ Route::get('/users/{user_id}', 'UsersController@show');
 
 
 Route::get('/posts/new', 'PostsController@new')->name('new');
+// Route::post()
 
 Route::get('/posts/{post_id}', 'PostsController@show');
 
-
 Route::post('users/update', 'UsersController@update');
-
 
 Route::post('/posts', 'PostsController@store');
 
@@ -42,3 +41,7 @@ Route::get('/likes/{like_id}', 'LikesController@destroy');
 Route::post('/posts/{comment_id}/comments', 'CommentsController@store');
 
 Route::get('/comments/{comment_id}', 'CommentsController@destroy');
+
+Route::get('/materials/new', 'MaterialsController@new');
+
+Route::post('/materials', 'MaterialsController@store');
