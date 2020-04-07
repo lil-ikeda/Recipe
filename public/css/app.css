@@ -122,6 +122,7 @@ ul,
 dl {
   margin-top: 0;
   margin-bottom: 1rem;
+  padding: 0px;
 }
 
 ol ol,
@@ -129,6 +130,7 @@ ul ul,
 ol ul,
 ul ol {
   margin-bottom: 0;
+  padding: 0px;
 }
 
 dt {
@@ -5070,14 +5072,14 @@ input[type=button].btn-block {
 
 .card-img,
 .card-img-top {
-  border-top-left-radius: calc(0.25rem - 1px);
-  border-top-right-radius: calc(0.25rem - 1px);
+  /* border-top-left-radius: calc(0.25rem - 1px);
+  border-top-right-radius: calc(0.25rem - 1px); */
 }
 
 .card-img,
 .card-img-bottom {
-  border-bottom-right-radius: calc(0.25rem - 1px);
-  border-bottom-left-radius: calc(0.25rem - 1px);
+  /* border-bottom-right-radius: calc(0.25rem - 1px);
+  border-bottom-left-radius: calc(0.25rem - 1px); */
 }
 
 .card-deck .card {
