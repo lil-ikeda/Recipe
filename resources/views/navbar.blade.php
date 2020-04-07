@@ -6,7 +6,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-md-auto align-items-center">
+          <ul class="navbar-nav ml-md-auto">
             <li>
               <a class="btn btn-primary" href="/posts/new">投稿</a>
             </li>
