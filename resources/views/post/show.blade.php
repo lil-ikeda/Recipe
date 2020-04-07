@@ -64,7 +64,7 @@
               {{csrf_field()}} 
                 <input value="{{ Auth::user()->id }}" type="hidden" name="user_id" />
                 <input value="{{ $post->id }}" type="hidden" name="post_id" />
-                <input class="form-control comment-input border-0" placeholder="コメント ..." autocomplete="off" type="text" name="comment" />
+                <input class="form-control comment-input border-0" placeholder="質問する ..." autocomplete="off" type="text" name="comment" />
               </form>
             </div>
             <div id="voice_content"></div>

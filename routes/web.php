@@ -22,9 +22,7 @@ Route::get('users/edit', 'UsersController@edit');
 
 Route::get('/users/{user_id}', 'UsersController@show');
 
-
 Route::get('/posts/new', 'PostsController@new')->name('new');
-// Route::post()
 
 Route::get('/posts/{post_id}', 'PostsController@show');
 
@@ -45,3 +43,5 @@ Route::get('/comments/{comment_id}', 'CommentsController@destroy');
 Route::get('/materials/new', 'MaterialsController@new');
 
 Route::post('/materials', 'MaterialsController@store');
+
+Route::post('/search/index', 'SearchController@index')->name('search');
