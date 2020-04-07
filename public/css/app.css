@@ -4438,6 +4438,7 @@ input[type=button].btn-block {
 .nav-link {
   display: block;
   padding: 0.5rem 1rem;
+  margin-right: 10px;
 }
 
 .nav-link:hover,
@@ -4556,10 +4557,13 @@ input[type=button].btn-block {
 
 .navbar-nav {
   display: flex;
-  flex-direction: column;
+  flex-direction: row-reverse;
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
+  background-color: #fff;
+  z-index: 1;
+  padding: 15px 5px;
 }
 
 .navbar-nav .nav-link {
@@ -4582,6 +4586,7 @@ input[type=button].btn-block {
   flex-basis: 100%;
   flex-grow: 1;
   align-items: center;
+  z-index: 1;
 }
 
 .navbar-toggler {
