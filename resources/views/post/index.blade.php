@@ -3,20 +3,25 @@
 @include('footer')
 
 @section('content')
-<div class="search_form">
-  </div>
+<form action="{{ route('search') }}" method="post">
+    @csrf
+    <div class='row'>
+        <div class='col-md-6'>
+            <div class='form-group'>
+                <input name="s_name" />
+            </div>
+        </div>
+    </div>
+    <div style="text-align: center;">
+        <button class='btn-default'>検索</button>
+    </div>
+</form>
+
   @foreach ($posts as $post)
   <div class="col-md-8 col-md-2 mx-auto">
     <div class="card-wrap">
       <div class="card">
         <div class="card-header align-items-center d-flex">
-          <!-- <a class="no-text-decoration" href="/users/{{ $post->user->id }}">
-            @if ($post->user->profile_photo)
-                <img class="post-profile-icon round-img" src="{{ asset('storage/user_images/' . $post->user->profile_photo) }}"/>
-            @else
-                <img class="post-profile-icon round-img" src="{{ asset('/images/blank_profile.png') }}"/>
-            @endif
-          </a> -->
           <a class="black-color no-text-decoration" title="{{ $post->user->name }}" href="/posts/{{ $post->id }}">
             <strong>{{ $post->name }}</strong>
           </a>
@@ -27,13 +32,12 @@
           	</a>
           @endif
         </div>
-
         <a href="/posts/{{ $post->id }}">
           <img src="/storage/post_images/{{ $post->id }}.jpg" class="card-img-top" />
         </a>
-    
       </div>
     </div>
   </div>
-@endforeach
+  @endforeach
+
 @endsection

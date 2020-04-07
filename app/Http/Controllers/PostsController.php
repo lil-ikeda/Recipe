@@ -8,6 +8,8 @@ use Auth;
 use Validator;
 
 use Illuminate\Http\Request;
+use Illuminate\Database\Eloquent\Model;
+
 
 class PostsController extends Controller
 {
@@ -19,10 +21,12 @@ class PostsController extends Controller
 
     public function index() 
     {
+        // 一覧機能
         $posts = Post::limit(10)
-            ->orderBy('created_at', 'desc')
-            ->get();
-
+        ->orderBy('created_at', 'desc')
+        ->get();
+        // PostsModel::where('example', 'test')->search(new PostsSearch());
+        
         return view('post/index', ['posts' => $posts]);
     }
 
@@ -73,4 +77,9 @@ class PostsController extends Controller
         $post->delete();
         return redirect('/');
     }
+
+    // public function search() {
+    //     $query = QueryParser::parse(new PostsSearch());
+    //     return redirect()->route('posts/index', $query);
+    // }
 }
