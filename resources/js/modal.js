@@ -1,3 +1,4 @@
+jQuery.noConflict();
 $(function(){
   $('.js_modal_open').on('click',function(){
       $('.js_modal').fadeIn();

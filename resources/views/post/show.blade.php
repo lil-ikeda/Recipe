@@ -30,7 +30,7 @@
       <br>
       <p class="guide_start">音声ガイドをスタートしますか？</p>
       <div class="yesno_split">
-        <div class="js_modal_close btn">やめる</div>
+        <div class="js_modal_close start-btn">やめる</div>
         <div class="js_modal_close" id="btn">スタートする</div>
       </div>
     </div>
@@ -67,7 +67,7 @@
                 <input class="form-control comment-input border-0" placeholder="コメント ..." autocomplete="off" type="text" name="comment" />
               </form>
             </div>
-
+            <div id="voice_content"></div>
             <hr>
 
             <div>
