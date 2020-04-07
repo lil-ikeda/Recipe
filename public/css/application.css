@@ -313,3 +313,6 @@ button {
   font-weight: bold;
   cursor: pointer;
 }
+#voice_content {
+  display: none;
+}

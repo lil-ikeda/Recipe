@@ -13,6 +13,10 @@
             <li>
               <a class="nav-link commonNavIcon profile-icon" href="/users/{{ Auth::user()->id }}"></a>
             </li>
+            <li>
+              <a class="btn" href="/materials/new">材料</a>
+            </li>
+
           </ul>
         </div>
       </div>

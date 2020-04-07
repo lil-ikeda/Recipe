@@ -1,3 +1,4 @@
+jQuery.noConflict();
 window.addEventListener('load', function() {
 
   const speech = new webkitSpeechRecognition();
@@ -181,6 +182,7 @@ window.addEventListener('load', function() {
 
   btn.addEventListener('click' , function() {
     // 音声認識をスタート
+    console.log("OK");
     content.innerHTML -= `<div class="js_audio">`;
     content.innerHTML += '<div class="js_audio">'+ audio_01 +'</div>';
     speech.start();
