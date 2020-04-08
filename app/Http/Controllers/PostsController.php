@@ -64,10 +64,7 @@ class PostsController extends Controller
     {
         $post = Post::where('id', $post_id)
             ->firstOrFail();
-        // \Log::info($post);
-        // $materials = Material::where('post_id', $post->id)
-        //     ->firstOrFail();
-        // \Log::info($post);
+            
         return view('post/show', ['post' => $post]);
     }
 
@@ -78,8 +75,4 @@ class PostsController extends Controller
         return redirect('/');
     }
 
-    // public function search() {
-    //     $query = QueryParser::parse(new PostsSearch());
-    //     return redirect()->route('posts/index', $query);
-    // }
 }

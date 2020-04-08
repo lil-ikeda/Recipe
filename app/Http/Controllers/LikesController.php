@@ -29,8 +29,10 @@ class LikesController extends Controller
     public function destroy(Request $request)
     {
         $like = Like::find($request->like_id);
+        $post_id = ($like->post_id);
+        
         $like->delete();
-        return redirect('/');
+        return redirect("/posts/$post_id");
     }
 
 
