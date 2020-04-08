@@ -25,6 +25,6 @@ class MaterialsController extends Controller
 
         $material->save();
 
-        return redirect('/');
+        return redirect('/materials/new');
     }
 }
