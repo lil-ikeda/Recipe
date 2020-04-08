@@ -29,6 +29,6 @@
     </div>
     @endforeach
 @else
-<p>一致するレシピはありません</p>
+<p class="no-result">一致するレシピはありません</p>
 @endif
 @endsection

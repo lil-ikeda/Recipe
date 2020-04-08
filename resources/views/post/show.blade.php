@@ -28,7 +28,7 @@
           <!-- 材料 -->
           <div class="howto_split">
             <p class="middle-title">材料</p>
-            <p class="middle-title__desc">クリックでチェックが入れられます<br>買い忘れがありませんように</p>
+            <p class="middle-title__desc">クリックでチェックが入れられます<br>買い忘れがありませんように！</p>
           </div>
 
           <div id="comment-post-{{ $post->id }}">

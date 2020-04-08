@@ -5,15 +5,13 @@
 @section('content')
 <form action="{{ route('search') }}" method="post">
     @csrf
-    <div class='row'>
-        <div class='col-md-6'>
-            <div class='form-group'>
-                <input name="s_name" />
-            </div>
-        </div>
-    </div>
-    <div style="text-align: center;">
-        <button class='btn-default'>検索</button>
+    <div class="search_split">
+      <div class='row search-row'>
+        <input class="search-form" placeholder="レシピ名で検索 ..." name="s_name" />
+      </div>
+      <div style="text-align: center;">
+          <button class='btn-default'>検索</button>
+      </div>
     </div>
 </form>
 
