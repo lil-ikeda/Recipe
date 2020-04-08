@@ -3,3 +3,14 @@ body {
   font-size: 14px;
   color: #262626;
 }
+.navbar-collapse {
+  z-index: 1;
+}
+.navbar-nav {
+  padding: 15px 5px;
+  background-color: #fff;
+  flex-direction: row-reverse;
+}
+.nav-link {
+  margin-right: 10px;
+}

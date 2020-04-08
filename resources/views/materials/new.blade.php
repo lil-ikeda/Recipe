@@ -1,4 +1,7 @@
 @extends('layouts.app')
+@include('navbar')
+@include('footer')
+
 @section('content')
 <div class="panel-body">
 
@@ -26,7 +29,6 @@
           </div>
           <input type="submit" name="commit" value="投稿する" class="btn btn-primary" data-disable-with="投稿する" />
           </form>
-                
       </div>
     </div>
   </div>

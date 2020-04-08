@@ -14,6 +14,7 @@
     <script src="{{ asset('js/app.js') }}" ></script>
     <script src="{{ asset('/js/modal.js') }}"></script>
     <script src="{{ asset('/js/audio.js') }}"></script>
+    <script src="{{ asset('/js/todo.js') }}"></script>
     <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script> -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

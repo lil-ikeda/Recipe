@@ -10,9 +10,27 @@
         <img src="/storage/post_images/{{ $post->id }}.jpg" class="card-img-top" />
         <!-- 料理名 -->
         <div class="card-middle">
+
+          <div class="split">
           <div class="post-name">{{ $post->name }}</div>
+          <div class="row parts">
+            <div id="like-icon-post-{{ $post->id }}">
+                @if ($post->likedBy(Auth::user())->count() > 0)
+                  <a class="loved hide-text" data-remote="true" rel="nofollow" data-method="DELETE" href="/likes/{{ $post->likedBy(Auth::user())->firstOrFail()->id }}">いいねを取り消す</a>
+                @else
+                  <a class="love hide-text" data-remote="true" rel="nofollow" data-method="POST" href="/posts/{{ $post->id }}/likes">いいね</a>
+                @endif
+              </div>
+          </div>
+          </div>
+
+          <div class="card-body">
           <!-- 材料 -->
-          <p class="middle-title">材料</p>
+          <div class="howto_split">
+            <p class="middle-title">材料</p>
+            <p class="middle-title__desc">クリックでチェックが入れられます<br>買い忘れがありませんように</p>
+          </div>
+
           <div id="comment-post-{{ $post->id }}">
             @include('post.material_list')
           </div>
@@ -44,16 +62,7 @@
           </div>
           <span>{!! nl2br(e($post->caption)) !!}</span>
         </div>
-        <div class="card-body">
-          <div class="row parts">
-            <div id="like-icon-post-{{ $post->id }}">
-                @if ($post->likedBy(Auth::user())->count() > 0)
-                  <a class="loved hide-text" data-remote="true" rel="nofollow" data-method="DELETE" href="/likes/{{ $post->likedBy(Auth::user())->firstOrFail()->id }}">いいねを取り消す</a>
-                @else
-                  <a class="love hide-text" data-remote="true" rel="nofollow" data-method="POST" href="/posts/{{ $post->id }}/likes">いいね</a>
-                @endif
-              </div>
-          </div>
+        
           
           <div id="like-text-post-{{ $post->id }}">
             @include('post.like_text')
@@ -64,22 +73,21 @@
               {{csrf_field()}} 
                 <input value="{{ Auth::user()->id }}" type="hidden" name="user_id" />
                 <input value="{{ $post->id }}" type="hidden" name="post_id" />
-                <input class="form-control comment-input border-0" placeholder="質問する ..." autocomplete="off" type="text" name="comment" />
+                <input class="form-control comment-input border-0" placeholder="レシピについて質問する ..." autocomplete="off" type="text" name="comment" />
               </form>
             </div>
+            
             <div id="voice_content"></div>
+            
             <hr>
 
             <div>
-            <!-- <span><strong>{{ $post->user->name }}</strong></span> -->
-            <div id="comment-post-{{ $post->id }}">
-              @include('post.comment_list')
+              <div id="comment-post-{{ $post->id }}">
+                @include('post.comment_list')
+              </div>
             </div>
-            <a class="light-color post-time no-text-decoration" href="/posts/{{ $post->id }}">{{ $post->created_at }}</a>
-            
           </div>
-        </div>
-</div>
-</div>
+    </div>
+  </div>
 </div>
 @endsection
