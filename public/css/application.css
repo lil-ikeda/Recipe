@@ -4,10 +4,15 @@
   height: 77px;
 }
 .navbar__brand {
-  margin-top: 25px;
+  margin-top: 12px;
   height: 65px;
   width: 210px;
   background-size: 220px;
+}
+@media (min-width: 1024px) {
+  .navbar__brand {
+    margin-top: 25px;
+  }
 }
 .navbar__mainLogo {
   background-repeat: no-repeat;
@@ -147,6 +152,14 @@ footer {
 .card-middle {
   padding: 20px;
 }
+.card-body {
+  padding: 0px;
+}
+@media (min-width: 768px) {
+  .card-body {
+    padding: 20px;
+  }
+}
 .middle-title {
   font-size: 22px;
   font-weight: bold;
@@ -250,18 +263,33 @@ footer {
 }
 .middle-title {
   padding: 8px 0;
-  border-bottom: solid 1px #d5d2cd;
+  font-size: 15px;
+}
+@media (min-width: 768px) {
+  .middle-title {
+    font-size: 22px;
+  }
 }
 .middle-title__desc {
   padding: 8px 0;
   margin: 0;
-  font-size: 12px;
+  font-size: 8px;
   color: #444;
+}
+@media (min-width: 768px) {
+  .middle-title__desc {
+    font-size: 12px;
+  }
 }
 .middle-title-howto {
   padding: 8px 0;
-  font-size: 22px;
+  font-size: 15px;
   font-weight: bold;
+}
+@media (min-width: 768px) {
+  .middle-title-howto {
+    font-size: 22px;
+  }
 }
 #material-list {
   padding: 0px;
@@ -340,13 +368,19 @@ footer {
   cursor: pointer;
 }
 button {
-  padding: 10px 30px;
+  padding: 5px 15px;
   border-radius: 30px;
   background-color: #dbb34d;
   color: #fff;
-  font-size: 15px;
+  font-size: 5px;
   font-weight: bold;
   cursor: pointer;
+}
+@media (min-width: 768px) {
+  button {
+    font-size: 15px;
+    padding: 10px 30px;
+  }
 }
 #voice_content {
   display: none;

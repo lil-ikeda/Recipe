@@ -7,7 +7,7 @@
     @csrf
     <div class="search_split">
       <div class='row search-row'>
-        <input class="search-form" placeholder="レシピ名で検索 ..." name="s_name" />
+        <input class="search-form" placeholder="材料名で検索 ..." name="s_name" />
       </div>
       <div style="text-align: center;">
           <button class='btn-default'>検索</button>
@@ -23,7 +23,7 @@
           <a class="black-color no-text-decoration" title="{{ $post->user->name }}" href="/posts/{{ $post->id }}">
             <strong>{{ $post->name }}</strong>
           </a>
-          @if ($post->user->id == Auth::user()->id)
+          @if ($post->user->email == "admin@admin.com")
           	<a class="ml-auto mx-0 my-auto" rel="nofollow" href="/postsdelete/{{ $post->id }}">
               <div class="delete-post-icon">
               </div>

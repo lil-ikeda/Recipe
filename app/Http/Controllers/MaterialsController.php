@@ -13,7 +13,12 @@ class MaterialsController extends Controller
 {
     public function new()
     {
-        return view('materials/new');
+        if(Auth::user()->email == "admin@admin.com")
+        {
+            return view('materials/new');
+        } else {
+            return redirect('/')->with('flash_message', '管理ユーザー以外はアクセスできません');
+        }
     }
 
     public function store(Request $request)
@@ -22,9 +27,7 @@ class MaterialsController extends Controller
         $material->post_id = $request->post_id;
         $material->name = $request->name;
         $material->amount = $request->amount;
-
         $material->save();
-
         return redirect('/materials/new');
     }
 }

@@ -7,16 +7,17 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-md-auto">
+          @if(Auth::user()->email == "admin@admin.com")
             <li>
-              <a class="btn btn-primary" href="/posts/new">投稿</a>
+              <a class="btn btn-primary" href="/posts/new">レシピ投稿</a>
             </li>
+            <li>
+              <a class="btn btn-primary" href="/materials/new">材料登録</a>
+            </li>
+          @endif
             <li>
               <a class="nav-link commonNavIcon profile-icon" href="/users/{{ Auth::user()->id }}"></a>
             </li>
-            <li>
-              <a class="btn" href="/materials/new">材料</a>
-            </li>
-
           </ul>
         </div>
       </div>

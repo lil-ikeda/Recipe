@@ -1,10 +1,10 @@
-jQuery.noConflict();
 window.addEventListener('load', function() {
 
   const speech = new webkitSpeechRecognition();
   speech.lang = 'ja-JP';
-  const btn = document.getElementById('btn');
+  const btn = document.getElementById('btnKeema');
   const content = document.getElementById('voice_content');
+  
 
   // 使用音源を定義
   const audio_01 = `<div class="audiojs loading" classname="audiojs" id="audiojs_wrapper01">
@@ -192,8 +192,6 @@ window.addEventListener('load', function() {
     speech.stop();
     if(e.results[0].isFinal){
       var autotext =  e.results[0][0].transcript
-      // console.log(autotext);
-      // console.log(audio_id);
       // 「次」と言った時だけ処理を進める
       if(autotext == "次")getAudio();
         function getAudio() {

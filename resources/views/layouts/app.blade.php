@@ -15,10 +15,8 @@
     <script src="{{ asset('/js/modal.js') }}"></script>
     <script src="{{ asset('/js/audio.js') }}"></script>
     <script src="{{ asset('/js/todo.js') }}"></script>
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script> -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -30,14 +28,16 @@
     
 </head>
 <body>
-    @yield('navbar')
-    
-    <div class="container">
-        @yield('content')
+@if (session('flash_message'))
+    <div class="flash_message bg-warning text-center py-3 my-0">
+        {{ session('flash_message') }}
     </div>
-
-    @yield('footer')
-
+@endif
+@yield('navbar')    
+<div class="container">
+    @yield('content')
+</div>
+@yield('footer')
     
 </body>
 </html>
