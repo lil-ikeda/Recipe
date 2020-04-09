@@ -51,7 +51,16 @@
                 <p class="guide_start">音声ガイドをスタートしますか？</p>
                 <div class="yesno_split">
                   <div class="js_modal_close start-btn">やめる</div>
-                  <div class="js_modal_close" id="btn">スタートする</div>
+                  <!-- <div class="js_modal_close" data-id="{{ $post->id }}">スタートする</div> -->
+                  @if($post->name == "SBカレー粉を使ったキーマカレー")
+                    <div class="js_modal_close" id="btn">スタートする</div>
+                  @elseif($post->name == "サバ缶カレー")
+                    <div class="js_modal_close" id="sababtn">スタートする</div>
+                  @elseif($post->name == "サツマイモのカレー豆乳スープ")
+                    <div class="js_modal_close" id="soupbtn">スタートする</div>
+                  @elseif($post->name == "クラフトコーラ")
+                    <div class="js_modal_close" id="cokebtn">スタートする</div>
+                  @endif
                 </div>
               </div>
             </div>

@@ -43,7 +43,7 @@ class PostsController extends Controller
     public function store(Request $request)
     {
         //バリデーション（入力値チェック）
-        $validator = Validator::make($request->all() , ['caption' => 'required|max:255', 'photo' => 'required']);
+        $validator = Validator::make($request->all() , ['caption' => 'required|max:1000', 'photo' => 'required']);
 
         //バリデーションの結果がエラーの場合
         if ($validator->fails())

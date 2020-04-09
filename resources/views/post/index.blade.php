@@ -23,7 +23,7 @@
           <a class="black-color no-text-decoration" title="{{ $post->user->name }}" href="/posts/{{ $post->id }}">
             <strong>{{ $post->name }}</strong>
           </a>
-          @if ($post->user->email == "admin@admin.com")
+          @if (Auth::user()->email == "admin@admin.com")
           	<a class="ml-auto mx-0 my-auto" rel="nofollow" href="/postsdelete/{{ $post->id }}">
               <div class="delete-post-icon">
               </div>
