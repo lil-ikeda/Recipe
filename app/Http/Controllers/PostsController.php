@@ -32,7 +32,12 @@ class PostsController extends Controller
 
     public function new()
     {
-        return view('post/new');
+        if(Auth::user()->email == "admin@admin.com")
+        {
+            return view('post/new');
+        } else {
+            return redirect('/')->with('flash_message', '管理ユーザー以外はアクセスできません');
+        }
     }
 
     public function store(Request $request)

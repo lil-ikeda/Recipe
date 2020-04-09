@@ -3,10 +3,13 @@
   border-bottom: 1px solid rgba(0, 0, 0, .0975);
   height: 77px;
   &__brand {
-    margin-top: 25px;
+    margin-top: 12px;
     height: 65px;
     width: 210px;
     background-size: 220px;
+    @media (min-width: 1024px) {
+      margin-top: 25px;
+    }
   }
   &__mainLogo {
     background-repeat: no-repeat;
