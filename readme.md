@@ -28,9 +28,9 @@
 
 # 使用画面サンプル
 
-| レシピ一覧画面 | 音声ガイドスタートボタン | ガイド操作説明画面 |
+| レシピ一覧画面 | 材料打ち消し機能/音声ガイドスタートボタン | ガイド操作説明画面 |
 ----|----|----
-| <img src="https://i.gyazo.com/783f9f7cc97ed71b66b5008461331ce0.jpg" width="300px"> | <img src="https://i.gyazo.com/2fd815478e40523e6429625b137d1a6e.png" width="300px"> | <img src="https://i.gyazo.com/759b41304829b5756f524e85c0d4f9d8.png" width="300px"> |
+| <img src="https://i.gyazo.com/783f9f7cc97ed71b66b5008461331ce0.jpg" width="300px"> | <img src="https://i.gyazo.com/28d7ac87f25ea56e59d7a22aa97e1f46.png" width="300px"> | <img src="https://i.gyazo.com/759b41304829b5756f524e85c0d4f9d8.png" width="300px"> |
 
 # 使用技術
 - PHP
