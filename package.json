@@ -26,7 +26,7 @@
     "sass-loader": "^8.0.0",
     "vue": "^2.5.17",
     "vue-template-compiler": "^2.6.10",
-    "webpack-cli": "^3.3.11"
+    "webpack-cli": "^3.3.12"
   },
   "name": "best_curry",
   "description": "<p align=\"center\"><img src=\"https://laravel.com/assets/img/components/logo-laravel.svg\"></p>",
